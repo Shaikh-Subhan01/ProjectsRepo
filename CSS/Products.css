@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+.section-heading{
+    text-align: center;
+    font-family: "Aboreto", system-ui;
+    position: relative;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+#Item{
+   height: 1000px;
+}
+
+.Head{
+   border-radius: 29px;
+   background-color: rgba(250, 245, 228, 0.618);
+   color: black;
+   font-family: "Aboreto", system-ui ;
+   letter-spacing: 10px;
+   text-transform: uppercase;
+   font-size: 20px;
+   padding: 10px 0 10px 0;
+   font-weight: bolder;
+   /* font-size: 30px; */
+}
+ .card{
+   height: 450px;
+   border: none;
+   transition: all .5s;
+   position: relative;
+   overflow: hidden;
+   border: 2px solid rgba(245, 245, 220, 0.768);
+
+}
+.card-title, .card-subtitle{
+  font-family:'montserrat' ;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+}
+.card:hover{
+   box-shadow: 0px 10px 30px rgba(128, 128, 128, 0.274);
+   border: 5px solid rgba(245, 245, 220, 0.768);
+
+}
+.card-body{
+   transition: .4s all;
+   transform: translateY(150%);
+}
+.card:hover .card-body{
+   transform: translateY(0);
+}  
+.modal-header{
+  border-bottom: none;
+  padding: 10px 20px;
+}
+.modal-footer{
+  display: none;
+}
+.modal-header h4{
+  font-family: "Aboreto", system-ui;
+  font-weight: 600;
+  text-align: center;
+}
+.productPrice{
+  font-size: 22px;
+  font-family: 'montserrat';
+  font-weight: regular;
+  /* text-decoration: underline; */
+  padding-top: 50px;
+  padding-left: 50px;
+}
+/* Ratings */
+.rating{
+display: flex;
+justify-content: center;
+flex-direction: row-reverse;
+}
+.rating:not(:checked) > input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  color: #666;
+}
+
+.rating:not(:checked) > label:before {
+  content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+  color: #ffa723;
+}
+
+.TopCat{
+  position: absolute;
+  top: 0PX;
+  left: 0PX;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 198, 12, 0.76);
+}
+
+/* Video */
+.video-container {
+  position: relative;
+  width: 100vw;
+  height: 0;
+  /* padding-bottom: 56.25%; */
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Transparent background */
+  z-index: 10; /* Ensures the link is above the iframe */
+}
+
+
+.card{
+  position: relative;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.card-body{
+  width: 100%;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.727);
+  position: absolute;
+  transition: .4s all;
+  transform: translateY(150%);
+  padding-bottom: 70px;
+  font-weight: bolder;
+  /* color: white; */
+  bottom: 0;
+}
+@media screen and (max-width:768px) {
+  .card{
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .card-body{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.915);
+    position: absolute;
+    transition: .4s all;
+    transform: translateY(0);
+    padding: 50px;
+    bottom: 0;
+ }
+ /* .card:hover .card-body{
+    transform: translateY(0);
+ }   */
+}

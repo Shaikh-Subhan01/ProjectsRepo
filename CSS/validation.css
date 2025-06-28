@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+  /* FORM VALIDATION */
+  form input:focus{
+    outline: none !important;
+}
+  form input[type='text']:not(:focus):not(:placeholder-shown):valid, form input[type='email']:not(:focus):not(:placeholder-shown):valid,form input[type='password']:not(:focus):not(:placeholder-shown):valid{
+    outline:1px solid rgb(57,141,162);
+}
+form input[type='text']:not(:focus):not(:placeholder-shown):invalid, form input[type='email']:not(:focus):not(:placeholder-shown):invalid,form input[type='password']:not(:focus):not(:placeholder-shown):invalid{
+  outline:1px solid red;
+}
+form input[type='password']:not(:focus):not(:placeholder-shown):invalid ~ #passError{
+  color: red;
+}
+.passfelid{
+  position: relative;
+}
+.togglePassword{
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  cursor: pointer;
+}
+  /* MEDIA QUERY */
+  @media screen and (max-width:630px){
+    .dropdown.show ~ .nav-dropdown .dropdown-menu{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+  }
+  @media screen and (max-width:450px){
+    .dropdown.show ~ .nav-dropdown .dropdown-menu{
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: 3;
+        text-align: center;
+        max-height: 80vh;
+        overflow-y: auto;
+
+    }
+  }
+
+
+
+
+
+
+  

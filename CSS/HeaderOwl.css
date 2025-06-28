@@ -1,0 +1,66 @@
+.main{
+    width: 100vw;
+    background-color: rgb(244, 244, 207);
+}
+.carousel{
+    /* background-color: aqua; */
+    padding-top: 10px;
+}
+.owl-carousel{
+    position: relative;
+    height: 100%;
+}
+.item {
+    position: relative;
+    margin: 51px;
+    border-radius: 3px;
+    text-align: center;
+    transition: .8s ease all;
+    height: 400px;
+    top: 50%;
+    transform: translate(-50% -50%);
+}
+
+/* ALL ITEMS */
+.owl-item .card{
+    transition: .6s ease;
+    transform: scale(.8);
+    filter: blur(3px) brightness(.6);
+    border-radius: 10PX;
+    /* drop-shadow(5px -4px 9px rgba(33, 28, 31, 0.607)); */
+
+}
+/* CENTER ITEM */
+.owl-item.center .card{
+    transform:
+    /* rotate(26deg)  */
+    scale(.9);
+    transition: .5s ease all;
+    filter: blur(0px);
+    z-index: 1;
+}
+.owl-item.center{
+    filter: blur(0px);
+     /* drop-shadow(5px -4px 9px rgba(33, 28, 31, 0.363)); */
+    /* margin-left: -1%; */
+    z-index: 4;
+}
+.owl-item.center .float{
+    animation: float 2.5s .6s infinite;
+}
+
+.owl-dots{
+    margin: 0;
+}
+@keyframes float{
+    0%{
+        transform: translateY(0px) rotate(26deg) scale(2.6);
+    }
+    50%{
+        transform: translateY(10px) rotate(26deg) scale(2.6);
+    }
+    100%{
+        transform: translate(0px) rotate(26deg) scale(2.6);
+    }
+}
+
